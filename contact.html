@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>კონტაქტი - სსიპ N10 საჯარო სკოლა</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #e0f0ff, #ffffff);
+      color: #333;
+    }
+
+    /* ნავიგაცია */
+    nav {
+      background-color: #004080;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      margin: 0 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    /* მთავარი კონტეინერი */
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 40px 30px;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 {
+      color: #004080;
+      font-size: 32px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      color: #555;
+    }
+
+    /* დამატებითი სტილი ტელეფონს და მეილსთვის */
+    .contact-item {
+      background: #f0f8ff;
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: background 0.3s;
+    }
+    .contact-item:hover {
+      background: #d0e8ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ნავიგაცია -->
+  <nav>
+    <ul>
+      <li><a href="index.html">მთავარი</a></li>
+      <li><a href="structure.html">სტრუქტურა</a></li>
+      <li><a href="infrastructure.html">ინფრასტრუქტურა</a></li>
+      <li><a href="contact.html">კონტაქტი</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>კონტაქტი</h1>
+    <p class="contact-item">მისამართი: ჭავჭავაძის 50, ქუთაისი, საქართველო</p>
+    <p class="contact-item">ტელეფონი: +995 555 123 456</p>
+    <p class="contact-item">მეილი: school10@example.com</p>
+  </div>
+
+</body>
+</html>

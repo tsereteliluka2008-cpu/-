@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>სსიპ N10 საჯარო სკოლა - სტრუქტურა</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+nav {
+  background-color: #004080;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+nav li { margin: 0 20px; }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+nav a:hover { color: #ffdd57; }
+
+/* Split Layout */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 40px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+.left img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Info boxes */
+.info-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.info-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.info-box h3 { font-family: 'Playfair Display', serif; color: #004080; margin-bottom: 10px; }
+.info-box p { line-height: 1.6; font-size: 16px; }
+
+/* Responsive */
+@media(max-width: 900px){
+  .container { flex-direction: column; }
+  .left, .right { min-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ნავიგაცია -->
+<nav>
+  <ul>
+    <li><a href="index.html">მთავარი</a></li>
+    <li><a href="structure.html">სტრუქტურა</a></li>
+    <li><a href="infrastructure.html">ინფრასტრუქტურა</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="left">
+    <img src="სკოლის სტრუქტურა.png" alt="სკოლის სტრუქტურა">
+  </div>
+  <div class="right">
+    <div class="info-box">
+      <h3>მიზანი</h3>
+      <p>სკოლა, როგორც სასწავლო-საგანმანათლებლო დაწესებულება, იქცეს კულტურული და სათემო განვითარების ცენტრად, რომელიც ჩამოუყალიბებს მოზარდს პიროვნული სრულყოფისათვის საჭირო უნარებს, რათა შეძლოს სწრაფად ცვალებად სამყაროში ადაპტირება.</p>
+    </div>
+    <div class="info-box">
+      <h3>ხედვა</h3>
+      <p>სსიპ ქალაქ ქუთაისის N10 საჯარო სკოლის მომავლის ხედვაა, რომ იგი იყოს ორიენტირებული სწავლების ხარისხიანი პროცესის წარმართვაზე, შექმნას მუდმივად განვითარებადი და განახლებაზე ორიენტირებული სასწავლო გარემო. იზრუნოს მასწავლებლების პროფესიულ განვითარებაზე, თავისუფალი და საჭირო უნარ-ჩვევებით აღჭურვილი პიროვნებების ჩამოყალიბებაზე. წვლილი შეიტანოს ქვეყნის განვითარებაში.</p>
+    </div>
+    <div class="info-box">
+      <h3>ღირებულებები</h3>
+      <p>უსაფრთხოება; განათლების მაღალი ხარისხი; კონკურენტუნარიანი, პატრიოტი მოქალაქის აღზრდა; გლობალურ პროცესში ინტეგრაცია; საზოგადოების მაღალი ჩართულობა.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Scroll Animation for info boxes
+const boxes = document.querySelectorAll('.info-box');
+function checkBoxes() {
+  const triggerBottom = window.innerHeight * 0.85;
+  boxes.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+    if(boxTop < triggerBottom){
+      box.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', checkBoxes);
+window.addEventListener('load', checkBoxes);
+</script>
+
+</body>
+</html>

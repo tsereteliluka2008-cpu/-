@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>სსიპ N10 საჯარო სკოლა - ინფრასტრუქტურა</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body { margin:0; font-family:'Roboto', sans-serif; background:#f4f4f4; color:#333; }
+nav { background:#004080; padding:15px; position:sticky; top:0; z-index:100; }
+nav ul { list-style:none; display:flex; justify-content:center; margin:0; padding:0; }
+nav li { margin:0 20px; }
+nav a { color:white; text-decoration:none; font-weight:bold; font-size:16px; transition:0.3s; }
+nav a:hover { color:#ffdd57; }
+
+/* ტექსტის სექცია */
+.text-section { max-width:1000px; margin:50px auto; padding:0 20px; }
+.text-section h2 { font-family:'Playfair Display', serif; font-size:28px; color:#004080; margin-bottom:20px; text-align:center; }
+.text-section p { font-size:16px; line-height:1.7; margin-bottom:20px; }
+
+/* Slider */
+.slider-container { max-width:1000px; margin:50px auto; position:relative; overflow:hidden; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+.slider-track { display:flex; transition:transform 0.5s ease-in-out; }
+.slide { min-width:100%; user-select:none; }
+.slide img { width:100%; display:block; border-radius:15px; }
+
+/* Navigation arrows */
+.prev, .next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,64,128,0.7); color:white; border:none; font-size:30px; padding:10px 15px; cursor:pointer; border-radius:50%; z-index:10; transition:0.3s; }
+.prev:hover, .next:hover { background:rgba(0,64,128,0.9); }
+.prev { left:10px; }
+.next { right:10px; }
+
+/* Modern info cards section */
+.stats-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin:50px auto; max-width:1000px; }
+.stat-card { background:white; padding:30px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); text-align:center; width:180px; opacity:0; transform:translateY(30px); transition:opacity 0.8s, transform 0.8s; }
+.stat-card.visible { opacity:1; transform:translateY(0); }
+.stat-card h3 { color:#004080; margin-bottom:10px; font-family:'Playfair Display', serif; }
+.stat-card p { font-size:24px; font-weight:bold; }
+
+@media(max-width:950px){ .stat-card { width:45%; } }
+@media(max-width:600px){ .stat-card { width:100%; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">მთავარი</a></li>
+    <li><a href="structure.html">სტრუქტურა</a></li>
+    <li><a href="infrastructure.html">ინფრასტრუქტურა</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
+<div class="text-section">
+  <h2>სკოლის ინფრასტრუქტურა</h2>
+  <p>სსიპ ქალაქ ქუთაისის N10 საჯარო სკოლის შენობა განთავსებულია ჭავჭავაძის N50-ში, 2019 წელს სკოლას ჩაუტარდა სრული რეაბილიტაცია ათასწლეულის გამოწვევის ფონდის მილენიუმის პროგრამის ფარგლებში. საკლასო ოთახები სრულად არის აღჭურვილი სასკოლო ინვენტარით. სკოლაში ფუნქციონირებს ქიმიის, ფიზიკა-ბიოლოგიისა და კომპიუტერული ლაბორატორიები, რომლებიც აღჭურვილია თანამედროვე ტექნიკით, ასევე ფუნქციონირებს სასკოლო ბიბლიოთეკა, რესურს ოთახი, სპორტული დარბაზი, სააქტო დარბაზი, სკოლას აქვს 12 სველი წერტილი (2 ადაპტირებული) და ექიმის კაბინეტი.</p>
+  <p>კომპიუტერების ლაბორატორიაში არის 45 პერსონალური კომპიუტერი და 23 ლეპტოპი. ბიბლიოთეკასთან ფუნქციონირებს სამკითხველო, სადაც არის წიგნების კატალოგი, მეთოდური ლიტერატურა, ატლასები და კლასიკური ლიტერატურა. ბიბლიოთეკის სივრცე ხელმისაწვდომია სასკოლო საზოგადოებისათვის, განკუთვნილია ღონისძიებებისა და კლუბური მუშაობისათვის.</p>
+</div>
+
+<!-- Slider -->
+<div class="slider-container">
+  <div class="slider-track">
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 1.png" alt="ფოტო 1"></div>
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 2.png" alt="ფოტო 2"></div>
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 3.png" alt="ფოტო 3"></div>
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 4.png" alt="ფოტო 4"></div>
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 5.png" alt="ფოტო 5"></div>
+    <div class="slide"><img src="სკოლის ინფრასტრუქტურა 6.png" alt="ფოტო 6"></div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+
+<!-- Modern info cards -->
+<div class="stats-grid">
+  <div class="stat-card"><h3>მოსწავლეები</h3><p>890</p></div>
+  <div class="stat-card"><h3>მასწავლებლები</h3><p>65</p></div>
+  <div class="stat-card"><h3>სპორტული დარბაზი</h3><p>1</p></div>
+  <div class="stat-card"><h3>კომპიუტერული ლაბორატორია</h3><p>1</p></div>
+  <div class="stat-card"><h3>ქიმიის ლაბორატორია</h3><p>1</p></div>
+</div>
+
+<script>
+/* Slider */
+const track = document.querySelector('.slider-track');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let index = 0;
+function showSlide(i){
+  if(i < 0) index = slides.length - 1;
+  else if(i >= slides.length) index = 0;
+  else index = i;
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+prevBtn.addEventListener('click', () => showSlide(index - 1));
+nextBtn.addEventListener('click', () => showSlide(index + 1));
+setInterval(() => showSlide(index + 1), 5000);
+
+/* Scroll Animation for stats cards */
+const statCards = document.querySelectorAll('.stat-card');
+function showStatCards() {
+  const trigger = window.innerHeight * 0.85;
+  statCards.forEach(card => {
+    if(card.getBoundingClientRect().top < trigger){ card.classList.add('visible'); }
+  });
+}
+window.addEventListener('scroll', showStatCards);
+window.addEventListener('load', showStatCards);
+</script>
+
+</body>
+</html>

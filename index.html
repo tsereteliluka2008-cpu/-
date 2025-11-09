@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>სსიპ N10 საჯარო სკოლა - მთავარი</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+body { margin:0; font-family:'Roboto', sans-serif; background:#f4f4f4; color:#333; }
+nav { background:#004080; padding:15px; position:sticky; top:0; z-index:100; }
+nav ul { list-style:none; display:flex; justify-content:center; margin:0; padding:0; }
+nav li { margin:0 20px; }
+nav a { color:white; text-decoration:none; font-weight:bold; font-size:16px; transition:0.3s; }
+nav a:hover { color:#ffdd57; }
+
+/* Banner Slider */
+.banner-slider { position:relative; width:100%; max-height:500px; overflow:hidden; }
+.banner-track { display:flex; transition:transform 0.5s ease-in-out; }
+.banner-slide { min-width:100%; }
+.banner-slide img { width:100%; height:500px; object-fit:cover; }
+.banner-prev, .banner-next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,64,128,0.7); color:white; border:none; font-size:30px; padding:10px 15px; cursor:pointer; border-radius:50%; z-index:10; transition:0.3s; }
+.banner-prev:hover, .banner-next:hover { background:rgba(0,64,128,0.9); }
+.banner-prev { left:10px; }
+.banner-next { right:10px; }
+
+/* News Slider */
+.news-slider { max-width:1000px; margin:50px auto; position:relative; overflow:hidden; }
+.news-track { display:flex; transition:transform 0.5s ease-in-out; }
+.news-slide { min-width:100%; display:flex; flex-direction:column; align-items:center; background:white; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); padding:20px; margin-bottom:30px; }
+.news-slide img { width:48%; object-fit:cover; border-radius:10px; margin-bottom:15px; }
+.news-slide h4 { color:#004080; font-family:'Playfair Display', serif; margin-bottom:10px; text-align:center; }
+.news-slide p { font-size:14px; text-align:center; color:#555; margin-bottom:10px; }
+.news-slide span { font-size:12px; color:#888; }
+
+/* News arrows */
+.news-prev, .news-next { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,64,128,0.7); color:white; border:none; font-size:25px; padding:8px 12px; cursor:pointer; border-radius:50%; z-index:10; transition:0.3s; }
+.news-prev:hover, .news-next:hover { background:rgba(0,64,128,0.9); }
+.news-prev { left:10px; }
+.news-next { right:10px; }
+
+/* Stats Section */
+.stats-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin:50px auto; max-width:1000px; }
+.stat-card { background:white; padding:30px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); text-align:center; width:180px; }
+.stat-card img { width:50px; margin-bottom:10px; }
+.stat-card h3 { color:#004080; margin-bottom:10px; font-family:'Playfair Display', serif; }
+.stat-card p { font-size:24px; font-weight:bold; }
+
+/* Director Section */
+.director-section { display:flex; justify-content:center; gap:50px; max-width:1000px; margin:50px auto; text-align:center; }
+.director-card { background:white; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); width:220px; }
+.director-card img { width:100%; border-radius:15px; margin-bottom:10px; }
+.director-card h3 { font-family:'Playfair Display', serif; color:#004080; margin-bottom:5px; }
+.director-card p { font-weight:bold; }
+
+@media(max-width:950px){ .director-section { flex-direction:column; } .stats-grid { justify-content:center; } .news-slide img { width:48%; margin-bottom:10px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">მთავარი</a></li>
+    <li><a href="structure.html">სტრუქტურა</a></li>
+    <li><a href="infrastructure.html">ინფრასტრუქტურა</a></li>
+    <li><a href="contact.html">კონტაქტი</a></li>
+  </ul>
+</nav>
+
+<!-- Banner Slider -->
+<div class="banner-slider">
+  <div class="banner-track">
+    <div class="banner-slide"><img src="კოლაჟი 1.jpg" alt="ფოტო 1"></div>
+    <div class="banner-slide"><img src="კოლაჟი 2.jpg" alt="ფოტო 2"></div>
+    <div class="banner-slide"><img src="კოლაჟი 3.jpg" alt="ფოტო 3"></div>
+    <div class="banner-slide"><img src="კოლაჟი 4.jpg" alt="ფოტო 4"></div>
+    <div class="banner-slide"><img src="კოლაჟი 5.jpg" alt="ფოტო 5"></div>
+    <div class="banner-slide"><img src="კოლაჟი 6.jpg" alt="ფოტო 6"></div>
+  </div>
+  <button class="banner-prev">&#10094;</button>
+  <button class="banner-next">&#10095;</button>
+</div>
+
+<!-- News Slider -->
+<div class="news-slider">
+  <div class="news-track">
+    <div class="news-slide">
+      <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
+        <img src="ტვინების ბრძლა 1.jpg" alt="სიახლე 1 ფოტო 1">
+        <img src="ტვინების ბრძლა 2.jpg" alt="სიახლე 1 ფოტო 2">
+      </div>
+      <h4>მე-10 საჯარო სკოლაში ჩატარდა ,,ტვინების ბრძოლის" ჩემპიონატი</h4>
+      <p>გამარჯვებული გუნდები დაჯილდოვდნენ დიპლომებით. IV / 1, VI / 1, XI / 3 კლასები. სკოლათაშორის ჩემპიონატზე ასპარეზობის უფლება მიიღეს.</p>
+      <span>23 ოქტომბერი 2025</span>
+    </div>
+    <div class="news-slide">
+      <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
+        <img src="იუბილე 55.jpg" alt="სიახლე 2 ფოტო 1">
+        <img src="იუბილე 555.jpg" alt="სიახლე 2 ფოტო 2">
+      </div>
+      <h4>სკოლის 55 წლის იუბილეს ღონისძიებაში მონაწილე მოსწავლეები დაჯილდოვდნენ</h4>
+      <p>ანი ხეცურიანი, ნინი ჯინჭარაძე, ლუკა ბენდელიანი და სხვები. მადლობის სიგელები გადაეცათ მათ.</p>
+      <span>24 სექტემბერი 2025</span>
+    </div>
+    <div class="news-slide">
+      <div style="display:flex; gap:10px; justify-content:center; margin-bottom:15px;">
+        <img src="სიგელი 1.jpg" alt="სიახლე 3 ფოტო 1">
+        <img src="სიგელი.jpg" alt="სიახლე 3 ფოტო 2">
+      </div>
+      <h4>ქუთაისის მერიამ წარმატებული პედაგოგები დააჯილდოვა</h4>
+      <p>ეკატერინე ცირეკიძე (ინგლისური ენა) და ინგა ტორჩინავა (ხელოვნება) დაჯილდოვდნენ მერიის ჯილდოთი.</p>
+      <span>23 სექტემბერი 2025</span>
+    </div>
+  </div>
+  <button class="news-prev">&#10094;</button>
+  <button class="news-next">&#10095;</button>
+</div>
+
+<!-- Stats Section -->
+<div class="stats-grid">
+  <div class="stat-card"><img src="მოსწავლე.png" alt="მოსწავლეები"><h3>მოსწავლეები</h3><p>890</p></div>
+  <div class="stat-card"><img src="მასწი.png" alt="მასწავლებლები"><h3>მასწავლებლები</h3><p>65</p></div>
+</div>
+
+<!-- Director Section -->
+<div class="director-section">
+  <div class="director-card">
+    <img src="ონისე.jpg" alt="დირექტორი">
+    <h3>ონისე ბოჭორიშვილი</h3>
+    <p>დირექტორი</p>
+  </div>
+  <div class="director-card">
+    <img src="რეზო.png" alt="მოადგილე">
+    <h3>რეზო მახარაძე</h3>
+    <p>დირექტორის მოადგილე</p>
+  </div>
+</div>
+
+<script>
+/* Banner Slider */
+const bannerTrack = document.querySelector('.banner-track');
+const bannerSlides = Array.from(document.querySelectorAll('.banner-slide'));
+const bannerPrev = document.querySelector('.banner-prev');
+const bannerNext = document.querySelector('.banner-next');
+let bannerIndex = 0;
+function showBanner(i){
+  if(i<0) bannerIndex = bannerSlides.length-1;
+  else if(i>=bannerSlides.length) bannerIndex=0;
+  else bannerIndex=i;
+  bannerTrack.style.transform = `translateX(-${bannerIndex*100}%)`;
+}
+bannerPrev.addEventListener('click',()=>showBanner(bannerIndex-1));
+bannerNext.addEventListener('click',()=>showBanner(bannerIndex+1));
+setInterval(()=>showBanner(bannerIndex+1),5000);
+
+/* News Slider */
+const newsTrack = document.querySelector('.news-track');
+const newsSlides = Array.from(document.querySelectorAll('.news-slide'));
+const newsPrev = document.querySelector('.news-prev');
+const newsNext = document.querySelector('.news-next');
+let newsIndex = 0;
+function showNews(i){
+  if(i<0) newsIndex = newsSlides.length-1;
+  else if(i>=newsSlides.length) newsIndex = 0;
+  else newsIndex=i;
+  newsTrack.style.transform = `translateX(-${newsIndex*100}%)`;
+}
+newsPrev.addEventListener('click',()=>showNews(newsIndex-1));
+newsNext.addEventListener('click',()=>showNews(newsIndex+1));
+setInterval(()=>showNews(newsIndex+1),7000);
+</script>
+
+</body>
+</html>
